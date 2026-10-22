@@ -7,10 +7,15 @@
 #include "main.h"
 #include "stm32l476xx.h"
 
+#define SPI_PIN 7
+
 void spi_init(){
 
 	// configure MOSI, MISO, SCK pins
-	GPIOA->MODER &= ~(0x3U << )
+	GPIOA->MODER &= ~(0x3U << SPI_PIN * 2);
+	GPIOA->MODER |= (0x2U << SPI_PIN * 2);
+
+
 
 }
 
